@@ -8,6 +8,9 @@ import { InfoComponent } from './components/info/info.component';
 import { HelpComponent } from './components/help/help.component';
 import { MoodCardComponent } from './components/home/mood-card/mood-card.component';
 import { SadMainComponent } from './components/sad/sad-main/sad-main.component';
+import { SadAltComponent } from './components/sad/sad-alt/sad-alt.component';
+import { BoredMainComponent } from './components/bored/bored-main/bored-main.component';
+import { BoredAltComponent } from './components/bored/bored-alt/bored-alt.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { SadMainComponent } from './components/sad/sad-main/sad-main.component';
     InfoComponent,
     HelpComponent,
     MoodCardComponent,
-    SadMainComponent
+    SadMainComponent,
+    SadAltComponent,
+    BoredMainComponent,
+    BoredAltComponent
   ],
   imports: [
     BrowserModule,
