@@ -16,6 +16,7 @@ import { AngryMainComponent } from './components/angry/angry-main/angry-main.com
 import { AngryThermometerComponent } from './components/angry/angry-thermometer/angry-thermometer.component';
 import { AngrySemaphoreComponent } from './components/angry/angry-semaphore/angry-semaphore.component';
 import { AngryTimerComponent } from './components/angry/angry-timer/angry-timer.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { AngryTimerComponent } from './components/angry/angry-timer/angry-timer.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
