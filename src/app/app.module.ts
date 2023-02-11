@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { InfoComponent } from './components/info/info.component';
 import { HelpComponent } from './components/help/help.component';
 import { MoodCardComponent } from './components/home/mood-card/mood-card.component';
+import { SadMainComponent } from './components/sad/sad-main/sad-main.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MoodCardComponent } from './components/home/mood-card/mood-card.compone
     HomeComponent,
     InfoComponent,
     HelpComponent,
-    MoodCardComponent
+    MoodCardComponent,
+    SadMainComponent
   ],
   imports: [
     BrowserModule,
