@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./sad-main.component.sass']
 })
 export class SadMainComponent {
+  array:string[] = ["a","b","a","b","a","b","a","b"]
+
 
 }
+
