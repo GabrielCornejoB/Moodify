@@ -1,0 +1,71 @@
+$red: #F50A06
+$red-alt: #750402
+$yellow: #F4C700
+$yellow-alt: #756000
+$green: #30F400
+$green-alt: #177500
+    
+.angry-semaphore-container
+    font-weight: bold
+    height: 100%
+    display: flex
+    flex-direction: column
+    .semaphore-content
+        display: flex
+        flex-direction: row
+        height: 100%
+        align-items: center
+        .text
+            width: 50%
+            height: 60%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-evenly
+            button, a
+                background-image: url("../../../../assets/imgs/rojo.jpg")
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 65px
+                height: 65px
+                border-radius: 50%
+                border: none
+                color: white
+                text-decoration: none
+
+        .semaphore
+            height: 100%
+            width: 50%
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            .back
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-evenly
+                width: 80%
+                height: 350px
+                background: #111211
+                border: 5px solid black
+                border-radius: 50px
+                .light
+                    width: 85px
+                    height: 85px
+                    border-radius: 50%
+                .red-light
+                    background: $red-alt
+                    border: 5px solid $red-alt
+                    &.active
+                        background: $red
+                .yellow-light
+                    background: $yellow-alt
+                    border: 5px solid $yellow-alt
+                    &.active
+                        background: $yellow
+                .green-light
+                    background: $green-alt
+                    border: 5px solid $green-alt
+                    &.active
+                        background: $green
