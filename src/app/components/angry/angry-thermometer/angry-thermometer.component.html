@@ -14,9 +14,7 @@
             </div>
             <div class="text" *ngIf="visibleCard">
                 <div class="card-msg" >
-                    <ng-container *ngIf="angriness<4 && angriness > 0">Estás tranquilo, tu nivel de enojo no es tan alto, por lo cual el problema puede no ser muy grave y tal vez puedas dejarlo pasar</ng-container>
-                    <ng-container *ngIf="angriness>3 && angriness<8">Hay una situación molesta, el enojo aún no te domina, por lo que deberías de afrontar el problema pero sin ser agresiv@</ng-container>
-                    <ng-container *ngIf="angriness>7">Sientes furia, lo cual puede estar nublando tus pensamientos, no deberías de tomar decisiones impulsivas, espera a estar un poco más en calma</ng-container>
+                    <ng-container>{{states[angriness-1]}}</ng-container>
                 </div>            
                 <a routerLink="/angry-semaphore" class="next-btn"><span class="material-symbols-outlined">arrow_forward</span></a>             
             </div>
