@@ -1,1 +1,25 @@
-<p>angry-thermometer works!</p>
+<div class="container">
+    <div class="angry-semaphore-container">
+        <p>Una forma es graficando visualmente el nivel de intensidad de nuestras emociones, a continuación señala que tan intensas son: </p>
+        <div class="semaphore">
+            <div class="buttons" >
+                <ng-container *ngFor="let val of values">
+                    <div class="pair">
+                        <input (click)="showCard()" type="radio" name="angry-level" id="{{val}}" value="{{val}}" [(ngModel)]="angriness">
+                        <ng-container *ngIf="val<4"><label for="{{val}}" style="color:green">{{val}}</label></ng-container>
+                        <ng-container *ngIf="val>3 && val<8"><label for="{{val}}" style="color:orange">{{val}}</label></ng-container>
+                        <ng-container *ngIf="val>7"><label for="{{val}}" style="color:red">{{val}}</label></ng-container>
+                    </div>
+                </ng-container>         
+            </div>
+            <div class="text" *ngIf="visibleCard">
+                <div class="card-msg" >
+                    <ng-container *ngIf="angriness<4 && angriness > 0">Estás tranquilo, tu nivel de enojo no es tan alto, por lo cual el problema puede no ser muy grave y tal vez puedas dejarlo pasar</ng-container>
+                    <ng-container *ngIf="angriness>3 && angriness<8">Hay una situación molesta, el enojo aún no te domina, por lo que deberías de afrontar el problema pero sin ser agresiv@</ng-container>
+                    <ng-container *ngIf="angriness>7">Sientes furia, lo cual puede estar nublando tus pensamientos, no deberías de tomar decisiones impulsivas, espera a estar un poco más en calma</ng-container>
+                </div>            
+                <a routerLink="/angry-semaphore" class="next-btn"><span class="material-symbols-outlined">arrow_forward</span></a>             
+            </div>
+        </div>
+    </div>
+</div>
