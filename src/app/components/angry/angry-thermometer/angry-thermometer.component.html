@@ -1,1 +1,29 @@
-<p>angry-thermometer works!</p>
+<div class="container">
+    <div class="angry-thermometer-container">
+        <p>Una forma es graficando visualmente el nivel de intensidad de nuestras emociones, a continuación señala que tan intensas son: </p>
+        <div class="thermometer">
+            <div class="buttons">
+                <ng-container *ngFor="let val of values">
+                    <div class="pair">
+                        <input (click)="showCard()" type="radio" name="angry-level" id="{{val}}" value="{{val}}" [(ngModel)]="angriness">
+                        <ng-container *ngIf="val<4"><label for="{{val}}" style="color:green">{{val}}</label></ng-container>
+                        <ng-container *ngIf="val>3 && val<8"><label for="{{val}}" style="color:orange">{{val}}</label></ng-container>
+                        <ng-container *ngIf="val>7"><label for="{{val}}" style="color:red">{{val}}</label></ng-container>
+                    </div>
+                </ng-container>         
+            </div>
+            <div class="text" *ngIf="visibleCard">
+                <div class="card-msg">
+                    {{states[angriness-1]}}
+                </div> 
+                <div class="card-msg">
+                    Tip:
+                    <ng-container *ngIf="angriness < 4">La situación problemática tal vez no tiene demasiada importancia, podrías considerar aceptarla y dejarla pasar</ng-container>
+                    <ng-container *ngIf="angriness >= 4 && angriness < 8">Puedes intentar discutir las cosas, pero sin ser agresivo, lo ideal es decir como te sientes y escuchar a los demás</ng-container>
+                    <ng-container *ngIf="angriness >= 8">Primero intenta entrar en un estado de calma, no tomes decisiones impulsivas ni intentes solucionar nada en este momento</ng-container>
+                </div>
+                <a routerLink="/angry-semaphore" class="next-btn"><span class="material-symbols-outlined">arrow_forward</span></a>             
+            </div>
+        </div>
+    </div>
+</div>

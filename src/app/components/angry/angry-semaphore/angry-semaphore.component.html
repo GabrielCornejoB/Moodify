@@ -1,26 +1,27 @@
 <div class="container">
     <div class="angry-semaphore-container">
-        <p>Una forma es graficando visualmente el nivel de intensidad de nuestras emociones, a continuación señala que tan intensas son: </p>
-        <div class="semaphore">
-            <div class="buttons" >
-                <ng-container *ngFor="let val of values">
-                    <div class="pair">
-                        <input (click)="showCard()" type="radio" name="angry-level" id="{{val}}" value="{{val}}" [(ngModel)]="angriness">
-                        <ng-container *ngIf="val<4"><label for="{{val}}" style="color:green">{{val}}</label></ng-container>
-                        <ng-container *ngIf="val>3 && val<8"><label for="{{val}}" style="color:orange">{{val}}</label></ng-container>
-                        <ng-container *ngIf="val>7"><label for="{{val}}" style="color:red">{{val}}</label></ng-container>
-                    </div>
-                </ng-container>         
+        <p><u>Parar y Pensar:</u> Esta es una estrategia para afrontar conflictos, completa el primer paso (luz roja) y cuando lo termines presiona la flecha</p>
+        <div class="semaphore-content">
+            <div class="text">
+                <h2>{{ subtitles[activeStep] }}</h2>
+                <p>{{ steps[activeStep] }}</p>
+
+                <ng-container *ngIf="activeStep < 2">
+                    <button (click)="nextStep()">
+                        <span class="material-symbols-outlined">arrow_downward</span>
+                    </button>
+                </ng-container>
+                <ng-container>
+                    <a routerLink="/angry-timer" *ngIf="activeStep == 2"><span class="material-symbols-outlined">arrow_forward</span></a>
+                </ng-container>
             </div>
-            <div class="text" *ngIf="visibleCard">
-                <div class="card-msg" >
-                    <ng-container *ngIf="angriness<4 && angriness > 0">Estás tranquilo, tu nivel de enojo no es tan alto, por lo cual el problema puede no ser muy grave y tal vez puedas dejarlo pasar</ng-container>
-                    <ng-container *ngIf="angriness>3 && angriness<8">Hay una situación molesta, el enojo aún no te domina, por lo que deberías de afrontar el problema pero sin ser agresiv@</ng-container>
-                    <ng-container *ngIf="angriness>7">Sientes furia, lo cual puede estar nublando tus pensamientos, no deberías de tomar decisiones impulsivas, espera a estar un poco más en calma</ng-container>
-                </div>            
-                <a routerLink="/angry-thermometer" class="next-btn"><span class="material-symbols-outlined">arrow_forward</span></a>             
+            <div class="semaphore">
+                <div class="back">
+                    <div class="light red-light" [ngClass]="activeStep == 0 ? 'active' : ''"></div>
+                    <div class="light yellow-light" [ngClass]="activeStep == 1 ? 'active' : ''"></div>
+                    <div class="light green-light" [ngClass]="activeStep == 2 ? 'active' : ''"></div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
