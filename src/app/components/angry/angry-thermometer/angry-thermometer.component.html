@@ -2,7 +2,7 @@
     <div class="angry-thermometer-container">
         <p>Una forma es graficando visualmente el nivel de intensidad de nuestras emociones, a continuación señala que tan intensas son: </p>
         <div class="thermometer">
-            <div class="buttons" >
+            <div class="buttons">
                 <ng-container *ngFor="let val of values">
                     <div class="pair">
                         <input (click)="showCard()" type="radio" name="angry-level" id="{{val}}" value="{{val}}" [(ngModel)]="angriness">
