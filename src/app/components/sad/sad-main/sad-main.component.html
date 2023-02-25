@@ -1,1 +1,16 @@
-<p>sad-main works!</p>
+<div class="container">
+<div class="sad-container">
+  <p>Es muy normal sentirte triste, aquí te dejamos algunos consejos que te podrían servir</p>
+<div class="card-container">
+  <ng-container *ngFor="let phrase of array">
+    <div class="blue-card">
+      <p>
+        {{phrase}}
+      </p>
+    </div>
+  </ng-container>
+</div>
+<a routerLink="/sad-alt" class="next-btn"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+
