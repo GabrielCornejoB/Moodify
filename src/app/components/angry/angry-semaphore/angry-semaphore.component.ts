@@ -6,13 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./angry-semaphore.component.sass']
 })
 export class AngrySemaphoreComponent {
-  angriness: number = 0;
-  visibleCard: boolean = false;
-  values: number[] = [10,9,8,7,6,5,4,3,2,1];
-
-  showCard() {
-    if (this.visibleCard == false) {
-      this.visibleCard = true;
+  activeStep: number = 0;
+  subtitles: string[] = ["Luz roja", "Luz amarilla", "Luz verde"];
+  steps: string[] = ["Cierra tus ojos, y respira profundamente 3 veces.", 
+                    "Piensa mínimo 3 formas de solucionar el conflicto, no importa que sean super descabelladas",
+                    "Entre las formas que pensaste, elige la alternativa más adecuada y ponla en acción!"];
+  nextStep() {
+    if (this.activeStep < 2){
+      this.activeStep += 1;
     }
   }
 }
