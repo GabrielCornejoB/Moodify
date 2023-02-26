@@ -1,7 +1,9 @@
 # **Moodify**
 Moodify es una aplicación móvil hibrida que busca brindar acompañamiento a usuarios que no sepan manejar muy bien sus emociones, en esta pueden expresar como se sienten y recibir consejos/estrategias que pueden ayudarlos con su estado de animo.
 
-Si desea ver más información acerca de Moodify, como pueden ser los wireframes manuales, los usuarios identificados, y demás; puede encontrarla en *[Planeación Moodify](Moodify.pdf)*.
+Si desea ver más información acerca de Moodify, como pueden ser los wireframes manuales, los usuarios identificados, y demás; puede encontrarla en *[Planeación Moodify](Moodify.pdf)*, y si desea acceder a Moodify a probar la aplicación, ingresar al siguiente link: [Moodify](https://gabrielcornejob.github.io/Moodify/home).
+
+NOTA: La aplicación fue realizada para la resolución 360px x 740px
 
 A continuación se encuentran los vinculos a las distintas secciones de este README:
 
