@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sad-alt.component.sass']
 })
 export class SadAltComponent {
-  sadgifsurl:string = "../../../../assets/gifs/sad-gifs/";
+  sadgifsurl:string = "assets/gifs/sad-gifs/";
   gifnames:string[] = ["1.gif", "2.gif","3.gif", "4.gif","5.gif", "6.gif","7.gif", "8.gif","9.gif"];
   concatenatedArray:string[] = [];
 

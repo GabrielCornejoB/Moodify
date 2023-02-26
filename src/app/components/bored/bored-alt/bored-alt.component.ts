@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BoredAltComponent {
 
-  boredgifsurl:string = "../../../../assets/gifs/bored-gifs/"; // url de la carpeta bored gifs
+  boredgifsurl:string = "assets/gifs/bored-gifs/"; // url de la carpeta bored gifs
   gifnames:string[] = ["1.gif", "2.gif","3.gif", "4.gif","5.gif", "6.gif","7.gif", "8.gif","9.gif"]; //Revisa que los nombres dentro de la carpeta de bored gifs sean los mismos que la del arreglo
   concatenatedArray:string[] = [];
 
